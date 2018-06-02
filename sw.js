@@ -1,6 +1,7 @@
 const CACHE_NAME = 'dentoo-lt-v1';
 const urlsToCache = [
   '/',
+  '/index.html',
   '/list.html',
   '/js/index.js',
 ];

@@ -1,7 +1,8 @@
 {
   "name": "Dentoo.LT",
   "short_name": "Dentoo.LT",
-  "start_url": "/index.html",
+  "start_url": "/",
+  "display": "standalone",
   "background_color" : "#FFFFFF",
   "theme_color": "#FFFFFF"
 }
