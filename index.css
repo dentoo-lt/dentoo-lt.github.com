@@ -1,0 +1,37 @@
+.site-header{
+    margin-top: 0px;
+    background: #dddddd;
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    padding-top: 100px;
+}
+
+h2,h3,h4{
+    font-size: 20pt;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+li {
+    list-style: none;
+}
+li:nth-child(2) {
+    margin: 0 30px;
+}
+
+p.icon img {
+    border-radius: 20px;
+}
