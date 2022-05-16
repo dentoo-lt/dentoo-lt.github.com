@@ -1,9 +1,39 @@
-body {
-    background-color: #333333;
-    text-align: center;
-    margin-top: 0;
-    color: #ffffff;
-    line-height: 2;
+* {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  line-height:2;
+}
+
+@font-face {
+  font-family: 'dentoo-lt';
+  src: url('font/dentoo-lt.ttf') format('truetype');
+}
+
+html{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 100%;
+  width: 100%;
+}
+
+
+body{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  background-color:black;
+  color: aliceblue;
+  text-align: center;
 }
 
 
@@ -31,7 +61,7 @@ p.icon img {
     border-radius: 20px;
 }
 
-.container{
+.logocontainer{
   text-align: center;
 	max-width: 100%;
   font-size: 50pt;
@@ -50,4 +80,149 @@ p.icon img {
 	100% {
 		opacity: 1;
 	}
+}
+
+.logocontainer{
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.logoitem{
+  width: fit-content;
+  height: fit-content;
+  opacity: 0;
+}
+
+.logoitemtext{
+  font-family: "dentoo-lt", sans-serif;
+  color: white;
+  font-size: 500%;
+  animation: pulse 0.6s ease 2.7s, delatelogo 0s 3.3s;
+  height: fit-content;
+}
+
+#logoitemwhole{
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: gradientAnime 5s linear 0s infinite;
+}
+
+#logoitemtextwhole{
+  opacity: 0;
+  color: blue;
+  font-family: "dentoo-lt", sans-serif;
+  font-size: 500%;
+  animation: displaylogo 0.5s linear 3.3s forwards;
+  background: linear-gradient(to right,hsla(0, 100%, 50%, 1),hsla(20, 100%, 50%, 1),hsla(40, 100%, 50%, 1),hsla(60, 100%, 50%, 1),hsla(80, 100%, 50%, 1),hsla(100, 100%, 50%, 1),hsla(120, 100%, 50%, 1),hsla(140, 100%, 50%, 1),hsla(160, 100%, 50%, 1),hsla(180, 100%, 50%, 1),hsla(200, 100%, 50%, 1),hsla(220, 100%, 50%, 1),hsla(240, 100%, 50%, 1),hsla(260, 100%, 50%, 1),hsla(280, 100%, 50%, 1),hsla(300, 100%, 50%, 1),hsla(320, 100%, 50%, 1),hsla(340, 100%, 50%, 1),hsla(360, 100%, 50%, 1));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#logoitem1{
+  animation: fadeInAnime1 0.5s ease-in 0.6s forwards;
+}
+#logoitem2{
+  animation: fadeInAnime2 0.5s ease-in 1.4s forwards;
+}
+#logoitem3{
+  animation: fadeInAnime3 0.5s ease-in 0s forwards;
+}
+#logoitem4{
+  animation: fadeInAnime4 0.5s ease-in 0.8s forwards;
+}
+#logoitem5{
+  animation: fadeInAnime5 0.5s ease-in 0.4s forwards;
+}
+#logoitem6{
+  animation: fadeInAnime6 0.5s ease-in 1.2s forwards;
+}
+#logoitem7{
+  animation: fadeInAnime7 1s linear 1.6s forwards;
+}
+#logoitem8{
+  animation: fadeInAnime8 0.5s ease-in 0.2s forwards;
+}
+#logoitem9{
+  animation: fadeInAnime9 0.5s ease-in 1s forwards;
+}
+
+@keyframes fadeInAnime1 {
+  0%{transform: translateY(400px) translateX(400px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime2 {
+  0%{transform: translateY(-400px) translateX(-200px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime3 {
+  0%{transform: translateY(0px) translateX(300px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime4 {
+  0%{transform: translateY(300px) translateX(-400px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime5 {
+  0%{transform: translateY(-400px) translateX(-100px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime6 {
+  0%{transform: translateY(200px) translateX(300px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime7 {
+  0%{transform: translateY(-500px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime8 {
+  0%{transform: translateY(-400px) translateX(400px);opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fadeInAnime9 {
+  0%{transform: translateY(-100px) translateX(400px);opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes pulse {
+  0% { font-size: 500%; }
+  50% { font-size: 550%;  }
+  100% { font-size: 500%;  }
+}
+@keyframes usebackgroundcolor {
+  0%{}
+  100%{
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+  }
+}
+@keyframes gradientAnime {
+  0%{filter: hue-rotate(0deg);}
+  10%{filter: hue-rotate(32deg);}
+  20%{filter: hue-rotate(72deg);}
+  30%{filter: hue-rotate(108deg);}
+  40%{filter: hue-rotate(144deg);}
+  50%{filter: hue-rotate(180deg);}
+  60%{filter: hue-rotate(216deg);}
+  70%{filter: hue-rotate(252deg);}
+  80%{filter: hue-rotate(288deg);}
+  90%{filter: hue-rotate(324deg);}
+  100%{filter: hue-rotate(360deg);}
+}
+@keyframes delatelogo {
+  0%{}
+  100%{color: rgba(255, 255, 255, 0);}
+}
+@keyframes displaylogo {
+  0%{}
+  100%{opacity: 1;}
 }
