@@ -1,24 +1,19 @@
-.site-header{
-    margin-top: 0px;
-    background: #dddddd;
-    text-align: center;
-    vertical-align: middle;
-    position: fixed;
-    justify-content: space-between;
-    width: 100%;
-}
-
 body {
+    background-color: #333333;
     text-align: center;
-    margin: 0;
+    margin-top: 0;
+    color: #ffffff;
+    line-height: 2;
 }
 
-h2 {
-    padding-top: 100px;
+
+a :link, a:visited , a:active, a:hover, a:active{
+    color: skyblue;
 }
 
 h2,h3,h4{
-    font-size: 20pt;
+  font-size: 25pt;
+  margin-top: 80px;
 }
 
 ul {
@@ -34,4 +29,25 @@ li:nth-child(2) {
 
 p.icon img {
     border-radius: 20px;
+}
+
+.container{
+  text-align: center;
+	max-width: 100%;
+  font-size: 50pt;
+}
+
+.text{
+	width: 100%;
+	opacity: 0;
+	animation: fadein-anim 10s linear forwards;
+  animation-timing-function: ease-out;
+  font-family: "Arial Black";
+}
+
+
+@keyframes fadein-anim {
+	100% {
+		opacity: 1;
+	}
 }
