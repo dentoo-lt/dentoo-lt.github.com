@@ -36,15 +36,29 @@ function makeShadowWithMouse() {
     }
 }
 
-
-function init()
-    {
-        window.onmousemove = changeMouseXY;
-        function changeMouseXY(event) {
-            if(makeshadow){
-                event = event || window.event; 
-                mousex = event.clientX;
-                mousey = event.clientY;
-            }
-        }
+function changeMouseXY(event) {
+    if(makeshadow){
+        event = event || window.event; 
+        mousex = event.clientX;
+        mousey = event.clientY;
     }
+}
+
+function resizeLogoContainerSize(){
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var logocontainer = document.getElementById("logocontainer");
+    logocontainer.style.width = width + "px";
+    logocontainer.style.height = height + "px";
+    console.log(height);
+}
+
+function init(){
+    window.onmousemove = changeMouseXY;
+
+    window.addEventListener('resize', resizeLogoContainerSize);
+}
+
+window.onload = function() {
+    init();
+};
