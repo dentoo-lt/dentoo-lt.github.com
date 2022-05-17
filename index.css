@@ -14,6 +14,12 @@ html{
   width: 100%;
 }
 
+.logocontainer{
+  background-color: black;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
 
 body{
   padding:auto;
