@@ -1,6 +1,7 @@
 ![Build Status](https://gitlab.com/pages/plain-html/badges/master/build.svg)
 
 ---
+http://dentoolt1.pages.gitlab.mma.club.uec.ac.jp/dentoo-lt
 
 Example plain HTML site using GitLab Pages.
 
