@@ -25,6 +25,12 @@ window.setTimeout(function(){
     makeshadow = true;
 }, 3400);
 
+window.setTimeout(function(){
+    if(window.scrollY <= 10){
+        $('html').animate({ scrollTop: 300 }, 1000, 'swing');
+    }
+}, 5000);
+
 function makeShadowWithMouse() {
     if(mousex >= 0 && mousey >= 0){
         var width = window.innerWidth;
@@ -50,13 +56,13 @@ function resizeLogoContainerSize(){
     var logocontainer = document.getElementById("logocontainer");
     logocontainer.style.width = width + "px";
     logocontainer.style.height = height + "px";
-    console.log(height);
 }
 
 function init(){
     window.onmousemove = changeMouseXY;
 
     window.addEventListener('resize', resizeLogoContainerSize);
+
 }
 
 window.onload = function() {
