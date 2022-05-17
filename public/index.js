@@ -50,19 +50,8 @@ function changeMouseXY(event) {
     }
 }
 
-function resizeLogoContainerSize(){
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    var logocontainer = document.getElementById("logocontainer");
-    logocontainer.style.width = width + "px";
-    logocontainer.style.height = height + "px";
-}
-
 function init(){
     window.onmousemove = changeMouseXY;
-
-    window.addEventListener('resize', resizeLogoContainerSize);
-
 }
 
 window.onload = function() {
