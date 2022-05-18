@@ -25,6 +25,12 @@ window.setTimeout(function(){
     makeshadow = true;
 }, 3400);
 
+window.setTimeout(function(){
+    if(window.scrollY <= 10){
+        $('html').animate({ scrollTop: 300 }, 1000, 'swing');
+    }
+}, 5000);
+
 function makeShadowWithMouse() {
     if(mousex >= 0 && mousey >= 0){
         var width = window.innerWidth;
@@ -36,15 +42,18 @@ function makeShadowWithMouse() {
     }
 }
 
-
-function init()
-    {
-        window.onmousemove = changeMouseXY;
-        function changeMouseXY(event) {
-            if(makeshadow){
-                event = event || window.event; 
-                mousex = event.clientX;
-                mousey = event.clientY;
-            }
-        }
+function changeMouseXY(event) {
+    if(makeshadow){
+        event = event || window.event; 
+        mousex = event.clientX;
+        mousey = event.clientY;
     }
+}
+
+function init(){
+    window.onmousemove = changeMouseXY;
+}
+
+window.onload = function() {
+    init();
+};
