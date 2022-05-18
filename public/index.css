@@ -14,21 +14,35 @@ html{
   width: 100%;
 }
 
-.logocontainer{
-  background-color: #111111;
-  text-align: center;
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-}
-
 body{
-  margin-top: 50%;
+  padding:auto;
+  margin: 0;
   width:100%;
   height:100%;
-  background-color:#111111;
+  background-color:#333333;
   color: #FFFFFF;
   text-align: center;
+  overflow-x: hidden;
+}
+
+#logocontainer{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-color: #000000;
+  width: 100%;
+  height: 100vh;
+}
+
+#logotextcontainer{
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 a :link, a:visited , a:active, a:hover, a:active{
@@ -37,42 +51,21 @@ a :link, a:visited , a:active, a:hover, a:active{
 
 h1{
   font-size: 25pt;
-  margin-top: 10%;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-p{
-  text-align: center;
+  margin-top: 50px;
 }
 
 .section-l{
-    text-align: left;
-    margin-left: 5%;
+  text-align: left;
+  margin-left: 5%;
 }
 
 .section-r{
-    text-align: right;
-    margin-right: 5%;
+  text-align: right;
+  margin-right: 5%;
 }
 
-/* .fadein{
-  animation-name:fadeUpAnime;
-  animation-duration: 4s;
-  animation-fill-mode:forwards;
-  opacity:1;
-  }
-
-@keyframes fadeUpAnime{
-  from {
-    opacity: 0;
-  transform: translateY(100px);
-  }
-} */
-
-.icons{
+p.icon img {
     border-radius: 20px;
-    text-align: center;
 }
 
 .text{
@@ -81,6 +74,13 @@ p{
 	animation: fadein-anim 10s linear forwards;
   animation-timing-function: ease-out;
   font-family: "Arial Black";
+}
+
+
+@keyframes fadein-anim {
+	100% {
+		opacity: 1;
+	}
 }
 
 .logocontainer{
@@ -227,8 +227,4 @@ p{
 @keyframes displaylogo {
   0%{}
   100%{opacity: 1;}
-}
-
-.hghsu{
-  background-color: #000000;
 }
