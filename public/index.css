@@ -15,19 +15,21 @@ html{
 }
 
 .logocontainer{
+  display: table-cell;
   position: absolute;
-  background-color: #000000;
+  background-color: #111111;
   text-align: center;
+  vertical-align: middle;
   width: 100%;
-  top: 0ex;
+  height: 100%;
 }
 
 body{
   padding:auto;
-  margin-top: 0;
+  margin-top: 50%;
   width:100%;
   height:100%;
-  background-color:#333333;
+  background-color:#111111;
   color: #FFFFFF;
   text-align: center;
 }
@@ -40,17 +42,40 @@ a :link, a:visited , a:active, a:hover, a:active{
 h1{
   font-size: 25pt;
   margin-top: 50px;
+  text-align: center;
 }
 
-li {
-    list-style: none;
-}
-li:nth-child(2) {
-    margin: 0 30px;
+p{
+  text-align: center;
 }
 
-p.icon img {
+.section-l{
+    text-align: left;
+    margin-left: 5%;
+}
+
+.section-r{
+    text-align: right;
+    margin-right: 5%;
+}
+
+.fadein{
+  animation-name:fadeUpAnime;
+  animation-duration: 4s;
+  animation-fill-mode:forwards;
+  opacity:1;
+  }
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+}
+
+.icons{
     border-radius: 20px;
+    text-align: center;
 }
 
 .text{
@@ -59,13 +84,6 @@ p.icon img {
 	animation: fadein-anim 10s linear forwards;
   animation-timing-function: ease-out;
   font-family: "Arial Black";
-}
-
-
-@keyframes fadein-anim {
-	100% {
-		opacity: 1;
-	}
 }
 
 .logocontainer{
