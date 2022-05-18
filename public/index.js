@@ -27,7 +27,7 @@ window.setTimeout(function(){
 
 window.setTimeout(function(){
     if(window.scrollY <= 10){
-        $('html').animate({ scrollTop: 300 }, 1000, 'swing');
+        $('html').animate({ scrollTop: 700 }, 1000, 'swing');
     }
 }, 5000);
 
