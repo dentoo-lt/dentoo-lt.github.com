@@ -15,8 +15,6 @@ html{
 }
 
 .logocontainer{
-  display: table-cell;
-  position: absolute;
   background-color: #111111;
   text-align: center;
   vertical-align: middle;
@@ -25,7 +23,6 @@ html{
 }
 
 body{
-  padding:auto;
   margin-top: 50%;
   width:100%;
   height:100%;
@@ -34,15 +31,15 @@ body{
   text-align: center;
 }
 
-
 a :link, a:visited , a:active, a:hover, a:active{
     color: skyblue;
 }
 
 h1{
   font-size: 25pt;
-  margin-top: 50px;
+  margin-top: 10%;
   text-align: center;
+  color: #FFFFFF;
 }
 
 p{
@@ -59,7 +56,7 @@ p{
     margin-right: 5%;
 }
 
-.fadein{
+/* .fadein{
   animation-name:fadeUpAnime;
   animation-duration: 4s;
   animation-fill-mode:forwards;
@@ -71,7 +68,7 @@ p{
     opacity: 0;
   transform: translateY(100px);
   }
-}
+} */
 
 .icons{
     border-radius: 20px;
