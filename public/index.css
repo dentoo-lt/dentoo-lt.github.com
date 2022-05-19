@@ -64,12 +64,12 @@ h1 {
   margin-top: 50px;
 }
 
-.section-l {
+.s1 {
   text-align: left;
   margin-left: 5%;
 }
 
-.section-r {
+.s2 {
   text-align: right;
   margin-right: 5%;
 }
@@ -81,27 +81,45 @@ p.icons img {
 .text {
   width: 100%;
   opacity: 0;
+  text-align: center;
   animation: fadein-anim 10s linear forwards;
   animation-timing-function: ease-out;
   font-family: 'Arial Black';
 }
 
+.t1 {
+  text-align: left;
+  margin-right: auto;
+}
+.t2{
+  text-align: right;
+  margin-left: auto;
+}
+.list{
+  font-size: 15pt;
+}
+
+footer{
+  margin-top: 1em;
+}
+
 table {
-  margin-top: 10pt;
-  text-align: center;
   background-color: #222222;
   width: 500px;
+  text-align: center;
 }
 
 table th {
   /*table内のthに対して*/
-  padding: 10px;
+  border: 1px black solid;
+  padding: 12px 12px;
   /*上下左右10pxずつ*/
 }
 
 table td {
+  width: auto;
   /*table内のtdに対して*/
-  padding: 5px 10px;
+  padding: 12px 12px;
   /*上下3pxで左右10px*/
 }
 
