@@ -89,7 +89,7 @@ p.icon img {
   color: white;
   font-size: 100px;
   width: 100%;
-  animation: pulse 0.6s ease 2.7s, delatelogo 0s 3.3s;
+  animation: delatelogo 0s 3.3s;
   height: fit-content;
 }
 
@@ -178,11 +178,6 @@ p.icon img {
   100%{opacity: 1;}
 }
 
-@keyframes pulse {
-  0% { font-size: 500%; }
-  50% { font-size: 550%;  }
-  100% { font-size: 500%;  }
-}
 @keyframes usebackgroundcolor {
   0%{}
   100%{
