@@ -37,8 +37,6 @@ body{
 #logotextcontainer{
   display: flex;
   flex-wrap: nowrap;
-  width: fit-content;
-  height: fit-content;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -80,19 +78,6 @@ p.icon img {
 	}
 }
 
-.logocontainer{
-  font-size: 50px;
-  display: flex;
-  flex-wrap: nowrap;
-  position: absolute;
-  width: fit-content;
-  height: 50;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
 .logoitem{
   width: fit-content;
   height: fit-content;
@@ -102,7 +87,8 @@ p.icon img {
 .logoitemtext{
   font-family: "dentoo-lt", sans-serif;
   color: white;
-  font-size: 500%;
+  font-size: 100px;
+  width: 100%;
   animation: pulse 0.6s ease 2.7s, delatelogo 0s 3.3s;
   height: fit-content;
 }
@@ -119,7 +105,8 @@ p.icon img {
   opacity: 0;
   color: blue;
   font-family: "dentoo-lt", sans-serif;
-  font-size: 500%;
+  font-size: 100px;
+  width: 100%;
   animation: displaylogo 0.5s linear 3.3s forwards;
   background: linear-gradient(to right,hsla(0, 100%, 50%, 1),hsla(20, 100%, 50%, 1),hsla(40, 100%, 50%, 1),hsla(60, 100%, 50%, 1),hsla(80, 100%, 50%, 1),hsla(100, 100%, 50%, 1),hsla(120, 100%, 50%, 1),hsla(140, 100%, 50%, 1),hsla(160, 100%, 50%, 1),hsla(180, 100%, 50%, 1),hsla(200, 100%, 50%, 1),hsla(220, 100%, 50%, 1),hsla(240, 100%, 50%, 1),hsla(260, 100%, 50%, 1),hsla(280, 100%, 50%, 1),hsla(300, 100%, 50%, 1),hsla(320, 100%, 50%, 1),hsla(340, 100%, 50%, 1),hsla(360, 100%, 50%, 1));
   -webkit-background-clip: text;

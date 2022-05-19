@@ -50,10 +50,31 @@ function changeMouseXY(event) {
     }
 }
 
-function init(){
+function resizeFontSize(){
+    var aspectratio = 7;
+    var width = window.innerWidth;
+    var logoitemtextwhole = document.getElementById("logoitemtextwhole");
+    var logoitemtext = document.getElementsByClassName("logoitemtext");
+    logoitemtextwhole.style.fontSize = width * 0.7 / aspectratio + "px"
+    for(i=0;i<logoitemtext.length;i++){
+        logoitemtext[i].style.fontSize = width * 0.7 / aspectratio + "px"
+    }
+}
+
+function initHTML(){
     window.onmousemove = changeMouseXY;
+
+    window.onresize = resizeFontSize;
+}
+
+function initDOM(){
+    resizeFontSize();
 }
 
 window.onload = function() {
-    init();
+    initHTML();
 };
+
+$(document).ready(() => {
+    initDOM();
+})
