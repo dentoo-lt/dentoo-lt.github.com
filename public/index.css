@@ -83,8 +83,9 @@ li:nth-child(2) {
     margin: 0 30px;
 }
 
-p.icons img {
+.icons img {
   border-radius: 20px;
+  text-align: center;
 }
 
 .text {
@@ -101,17 +102,23 @@ table {
   background-color: #222222;
   width: 500px;
 }
-
 table th {
   /*table内のthに対して*/
   padding: 10px;
   /*上下左右10pxずつ*/
 }
-
 table td {
   /*table内のtdに対して*/
   padding: 5px 10px;
   /*上下3pxで左右10px*/
+}
+
+.list{
+  margin-top: 0px;
+}
+
+.presentation{
+  scroll-margin-bottom: 10px;
 }
 
 @keyframes fadein-anim {
@@ -401,14 +408,12 @@ table td {
 /* fadein */
 .up{
   opacity: 0;
-  transition: all 1s ease;
+  transition: all 1.5s ease;
 }
- 
 .up.show {
   opacity: 1;
   transform: none;
 }
- 
 .op{
   transform: translate(0, 100px);
 }
