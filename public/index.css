@@ -3,7 +3,7 @@
   src: url('font/dentoo-lt.ttf') format('truetype');
 }
 
-html{
+html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -14,27 +14,25 @@ html{
   width: 100%;
 }
 
-body{
-  padding:auto;
-  margin: 0;
-  width:100%;
-  height:100%;
-  background-color:#333333;
-  color: #FFFFFF;
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  color: whitesmoke;
   text-align: center;
   overflow-x: hidden;
 }
 
-#logocontainer{
+#logocontainer {
   position: relative;
   top: 0px;
   left: 0px;
-  background-color: #000000;
+  background-color: #111111;
   width: 100%;
   height: 100vh;
 }
 
-#logotextcontainer{
+#logotextcontainer {
   display: flex;
   flex-wrap: nowrap;
   position: absolute;
@@ -43,11 +41,20 @@ body{
   transform: translate(-50%, -50%);
 }
 
-a :link, a:visited , a:active, a:hover, a:active{
-    color: skyblue;
+a:link {
+  color: azure;
+}
+a:visited{
+  color: beige;
+}
+a:hover {
+  color: #9daada;
+}
+a:active {
+  color: #77aa77;
 }
 
-h1{
+h1 {
   font-size: 25pt;
   margin-top: 50px;
 }
@@ -77,32 +84,62 @@ li:nth-child(2) {
 }
 
 p.icons img {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
-.text{
-	width: 100%;
-	opacity: 0;
-	animation: fadein-anim 10s linear forwards;
+.text {
+  width: 100%;
+  opacity: 0;
+  animation: fadein-anim 10s linear forwards;
   animation-timing-function: ease-out;
-  font-family: "Arial Black";
+  font-family: 'Arial Black';
 }
 
+table {
+  margin-top: 10pt;
+  text-align: center;
+  background-color: #222222;
+  width: 500px;
+}
+
+table th {
+  /*table内のthに対して*/
+  padding: 10px;
+  /*上下左右10pxずつ*/
+}
+
+table td {
+  /*table内のtdに対して*/
+  padding: 5px 10px;
+  /*上下3pxで左右10px*/
+}
 
 @keyframes fadein-anim {
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 
-.logoitem{
+.logocontainer {
+  font-size: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: fit-content;
+  height: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logoitem {
   width: fit-content;
   height: fit-content;
   opacity: 0;
 }
 
-.logoitemtext{
-  font-family: "dentoo-lt", sans-serif;
+.logoitemtext {
+  font-family: 'dentoo-lt', sans-serif;
   color: white;
   font-size: 100px;
   width: 100%;
@@ -110,7 +147,7 @@ p.icons img {
   height: fit-content;
 }
 
-#logoitemwhole{
+#logoitemwhole {
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -118,109 +155,260 @@ p.icons img {
   animation: gradientAnime 5s linear 0s infinite;
 }
 
-#logoitemtextwhole{
+#logoitemtextwhole {
   opacity: 0;
   color: blue;
   font-family: "dentoo-lt", sans-serif;
   font-size: 100px;
   width: 100%;
   animation: displaylogo 0.5s linear 3.3s forwards;
-  background: linear-gradient(to right,hsla(0, 100%, 50%, 1),hsla(20, 100%, 50%, 1),hsla(40, 100%, 50%, 1),hsla(60, 100%, 50%, 1),hsla(80, 100%, 50%, 1),hsla(100, 100%, 50%, 1),hsla(120, 100%, 50%, 1),hsla(140, 100%, 50%, 1),hsla(160, 100%, 50%, 1),hsla(180, 100%, 50%, 1),hsla(200, 100%, 50%, 1),hsla(220, 100%, 50%, 1),hsla(240, 100%, 50%, 1),hsla(260, 100%, 50%, 1),hsla(280, 100%, 50%, 1),hsla(300, 100%, 50%, 1),hsla(320, 100%, 50%, 1),hsla(340, 100%, 50%, 1),hsla(360, 100%, 50%, 1));
+  background: linear-gradient(
+    to right,
+    hsla(0, 100%, 50%, 1),
+    hsla(20, 100%, 50%, 1),
+    hsla(40, 100%, 50%, 1),
+    hsla(60, 100%, 50%, 1),
+    hsla(80, 100%, 50%, 1),
+    hsla(100, 100%, 50%, 1),
+    hsla(120, 100%, 50%, 1),
+    hsla(140, 100%, 50%, 1),
+    hsla(160, 100%, 50%, 1),
+    hsla(180, 100%, 50%, 1),
+    hsla(200, 100%, 50%, 1),
+    hsla(220, 100%, 50%, 1),
+    hsla(240, 100%, 50%, 1),
+    hsla(260, 100%, 50%, 1),
+    hsla(280, 100%, 50%, 1),
+    hsla(300, 100%, 50%, 1),
+    hsla(320, 100%, 50%, 1),
+    hsla(340, 100%, 50%, 1),
+    hsla(360, 100%, 50%, 1)
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
 
-#logoitem1{
+#logoitem1 {
   animation: fadeInAnime1 0.5s ease-in 0.6s forwards;
 }
-#logoitem2{
+
+#logoitem2 {
   animation: fadeInAnime2 0.5s ease-in 1.4s forwards;
 }
-#logoitem3{
+
+#logoitem3 {
   animation: fadeInAnime3 0.5s ease-in 0s forwards;
 }
-#logoitem4{
+
+#logoitem4 {
   animation: fadeInAnime4 0.5s ease-in 0.8s forwards;
 }
-#logoitem5{
+
+#logoitem5 {
   animation: fadeInAnime5 0.5s ease-in 0.4s forwards;
 }
-#logoitem6{
+
+#logoitem6 {
   animation: fadeInAnime6 0.5s ease-in 1.2s forwards;
 }
-#logoitem7{
+
+#logoitem7 {
   animation: fadeInAnime7 1s linear 1.6s forwards;
 }
-#logoitem8{
+
+#logoitem8 {
   animation: fadeInAnime8 0.5s ease-in 0.2s forwards;
 }
-#logoitem9{
+
+#logoitem9 {
   animation: fadeInAnime9 0.5s ease-in 1s forwards;
 }
 
 @keyframes fadeInAnime1 {
-  0%{transform: translateY(400px) translateX(400px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(400px) translateX(400px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime2 {
-  0%{transform: translateY(-400px) translateX(-200px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(-400px) translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime3 {
-  0%{transform: translateY(0px) translateX(300px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(0px) translateX(300px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime4 {
-  0%{transform: translateY(300px) translateX(-400px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(300px) translateX(-400px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime5 {
-  0%{transform: translateY(-400px) translateX(-100px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(-400px) translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime6 {
-  0%{transform: translateY(200px) translateX(300px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(200px) translateX(300px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime7 {
-  0%{transform: translateY(-500px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime8 {
-  0%{transform: translateY(-400px) translateX(400px);opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    transform: translateY(-400px) translateX(400px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeInAnime9 {
-  0%{transform: translateY(-100px) translateX(400px);opacity: 0;}
-  100%{opacity: 1;}
-}
+  0% {
+    transform: translateY(-100px) translateX(400px);
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    font-size: 500%;
+  }
+
+  50% {
+    font-size: 550%;
+  }
+
+  100% {
+    font-size: 500%;
+  }
+}
 @keyframes usebackgroundcolor {
-  0%{}
-  100%{
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
+  0% {
+  }
+
+  100% {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 }
 @keyframes gradientAnime {
-  0%{filter: hue-rotate(0deg);}
-  10%{filter: hue-rotate(32deg);}
-  20%{filter: hue-rotate(72deg);}
-  30%{filter: hue-rotate(108deg);}
-  40%{filter: hue-rotate(144deg);}
-  50%{filter: hue-rotate(180deg);}
-  60%{filter: hue-rotate(216deg);}
-  70%{filter: hue-rotate(252deg);}
-  80%{filter: hue-rotate(288deg);}
-  90%{filter: hue-rotate(324deg);}
-  100%{filter: hue-rotate(360deg);}
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  10% {
+    filter: hue-rotate(32deg);
+  }
+
+  20% {
+    filter: hue-rotate(72deg);
+  }
+
+  30% {
+    filter: hue-rotate(108deg);
+  }
+
+  40% {
+    filter: hue-rotate(144deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+  }
+
+  60% {
+    filter: hue-rotate(216deg);
+  }
+
+  70% {
+    filter: hue-rotate(252deg);
+  }
+
+  80% {
+    filter: hue-rotate(288deg);
+  }
+
+  90% {
+    filter: hue-rotate(324deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 @keyframes delatelogo {
-  0%{}
-  100%{color: rgba(255, 255, 255, 0);}
+  0% {
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
 }
 @keyframes displaylogo {
-  0%{}
-  100%{opacity: 1;}
+  0% {
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* fadein */
+.up{
+  opacity: 0;
+  transition: all 1s ease;
+}
+ 
+.up.show {
+  opacity: 1;
+  transform: none;
+}
+ 
+.op{
+  transform: translate(0, 100px);
 }
