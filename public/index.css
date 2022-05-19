@@ -35,8 +35,6 @@ body {
 #logotextcontainer {
   display: flex;
   flex-wrap: nowrap;
-  width: fit-content;
-  height: fit-content;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,15 +44,12 @@ body {
 a:link {
   color: azure;
 }
-
-a:visited {
+a:visited{
   color: beige;
 }
-
 a:hover {
   color: #9daada;
 }
-
 a:active {
   color: #77aa77;
 }
@@ -64,14 +59,28 @@ h1 {
   margin-top: 50px;
 }
 
-.section-l {
+.s1{
   text-align: left;
-  margin-left: 5%;
+  margin-right: auto;
+  margin-left: 7%;
+}
+.s2{
+  text-align: right;
+  margin-left: auto;
+  margin-right: 7%;
+}
+.t1{
+  margin-right: auto;
+}
+.t2{
+  margin-left: auto;
 }
 
-.section-r {
-  text-align: right;
-  margin-right: 5%;
+li {
+    list-style: none;
+}
+li:nth-child(2) {
+    margin: 0 30px;
 }
 
 p.icons img {
@@ -132,8 +141,9 @@ table td {
 .logoitemtext {
   font-family: 'dentoo-lt', sans-serif;
   color: white;
-  font-size: 500%;
-  animation: pulse 0.6s ease 2.7s, delatelogo 0s 3.3s;
+  font-size: 100px;
+  width: 100%;
+  animation: delatelogo 0s 3.3s;
   height: fit-content;
 }
 
@@ -148,8 +158,9 @@ table td {
 #logoitemtextwhole {
   opacity: 0;
   color: blue;
-  font-family: 'dentoo-lt', sans-serif;
-  font-size: 500%;
+  font-family: "dentoo-lt", sans-serif;
+  font-size: 100px;
+  width: 100%;
   animation: displaylogo 0.5s linear 3.3s forwards;
   background: linear-gradient(
     to right,
@@ -223,7 +234,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime2 {
   0% {
     transform: translateY(-400px) translateX(-200px);
@@ -234,7 +244,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime3 {
   0% {
     transform: translateY(0px) translateX(300px);
@@ -245,7 +254,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime4 {
   0% {
     transform: translateY(300px) translateX(-400px);
@@ -256,7 +264,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime5 {
   0% {
     transform: translateY(-400px) translateX(-100px);
@@ -267,7 +274,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime6 {
   0% {
     transform: translateY(200px) translateX(300px);
@@ -278,7 +284,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime7 {
   0% {
     transform: translateY(-500px);
@@ -289,7 +294,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime8 {
   0% {
     transform: translateY(-400px) translateX(400px);
@@ -300,7 +304,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnime9 {
   0% {
     transform: translateY(-100px) translateX(400px);
@@ -311,7 +314,6 @@ table td {
     opacity: 1;
   }
 }
-
 @keyframes pulse {
   0% {
     font-size: 500%;
@@ -325,7 +327,6 @@ table td {
     font-size: 500%;
   }
 }
-
 @keyframes usebackgroundcolor {
   0% {
   }
@@ -336,7 +337,6 @@ table td {
     color: transparent;
   }
 }
-
 @keyframes gradientAnime {
   0% {
     filter: hue-rotate(0deg);
@@ -382,16 +382,13 @@ table td {
     filter: hue-rotate(360deg);
   }
 }
-
 @keyframes delatelogo {
   0% {
   }
-
   100% {
     color: rgba(255, 255, 255, 0);
   }
 }
-
 @keyframes displaylogo {
   0% {
   }
