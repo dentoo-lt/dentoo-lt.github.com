@@ -397,15 +397,18 @@ table td {
     opacity: 1;
   }
 }
-.fade {
-  transition: all 2000ms;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0px, 50px);
-}
 
-.fadein {
+/* fadein */
+.up{
+  opacity: 0;
+  transition: all 1s ease;
+}
+ 
+.up.show {
   opacity: 1;
-  visibility: visible;
-  transform: translate(0px, 0px);
-} 
+  transform: none;
+}
+ 
+.op{
+  transform: translate(0, 100px);
+}
