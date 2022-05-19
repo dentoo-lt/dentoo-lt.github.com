@@ -52,6 +52,23 @@ h1{
   margin-top: 50px;
 }
 
+.s1{
+  text-align: left;
+  margin-right: auto;
+  margin-left: 7%;
+}
+.s2{
+  text-align: right;
+  margin-left: auto;
+  margin-right: 7%;
+}
+.t1{
+  margin-right: auto;
+}
+.t2{
+  margin-left: auto;
+}
+
 li {
     list-style: none;
 }
@@ -59,7 +76,7 @@ li:nth-child(2) {
     margin: 0 30px;
 }
 
-p.icon img {
+p.icons img {
     border-radius: 20px;
 }
 
@@ -207,4 +224,3 @@ p.icon img {
   0%{}
   100%{opacity: 1;}
 }
-
