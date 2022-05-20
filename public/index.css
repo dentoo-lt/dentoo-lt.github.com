@@ -17,6 +17,8 @@ html {
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: #111111;
   color: whitesmoke;
   text-align: center;
@@ -126,14 +128,14 @@ table td {
   text-align: left;
   margin-left: 0px;
   margin-right: auto;
-  max-width: 75%;
+  max-width: calc(75%);
 }
 
 .s2 .video-wrap {
   text-align: right;
   margin-left: auto;
   margin-right: 0px;
-  max-width: 75%;
+  max-width: calc(75%);
 }
 
 .video {
