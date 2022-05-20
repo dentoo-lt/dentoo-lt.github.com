@@ -25,7 +25,12 @@ body {
   overflow-x: hidden;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   box-sizing: border-box;
+  z-index: -10;
 }
+
+/* #whole {
+  filter: blur(20px) grayscale(100%);
+} */
 
 #logocontainer {
   position: relative;
@@ -517,4 +522,57 @@ table td {
 /* CSSコード */
 html {
   scroll-behavior: smooth;
+}
+
+#test {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255, 0.8);
+  z-index: 25;
+  max-width: 75%;
+  visibility: hidden;
+}
+
+#test iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+/* #test .video-wrap {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0px;
+  max-width: calc(75%);
+  z-index: 100;
+} */
+
+#test .video {
+  position: fixed;
+  width: 100%;
+  height: 0%;
+  padding-top: 56.25%;
+  z-index: 100;
+}
+
+#delete {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+#delete img {
+  height: 100%;
+  width: 100%;
 }

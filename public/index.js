@@ -68,6 +68,13 @@ function resizeFont() {
   }
 }
 
+function resizeiflame() {
+  var width = $(window).width();
+  var test = document.getElementById("test");
+  test.style.width = width * 0.7 + "px";
+  test.style.height = width * 0.7 * 0.5625 + "px";
+}
+
 function initDOM() {
   resizeFont();
   document.body.scrollTop = Number(localStorage.getItem("nowscroll"));
@@ -75,6 +82,9 @@ function initDOM() {
   window.onmousemove = changeMouseXY;
 
   window.onresize = resizeFont;
+
+  resizeiflame();
+  window.onresize = resizeiflame;
 }
 
 window.onload = function () {};
@@ -104,3 +114,18 @@ window.onload = function () {
 $(window).on("orientationchange", function () {
   location.reload();
 });
+
+function deleteiframe() {
+  var test = document.getElementById("test");
+  test.style.visibility = "hidden";
+  // var whole = document.getElementById("whole");
+  // whole.style.filter = "";
+  $("#whole").css("filter", "");
+}
+
+function displayiframe(url) {
+  var whole = document.getElementById("whole");
+  whole.style.filter = "blur(20px) grayscale(100%)";
+  var test = document.getElementById("test");
+  test.style.visibility = "visible";
+}
