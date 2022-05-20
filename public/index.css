@@ -24,6 +24,7 @@ body {
   text-align: center;
   overflow-x: hidden;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing : border-box;
 }
 
 #logocontainer {
@@ -65,12 +66,12 @@ h1 {
 .s1 {
   text-align: left;
   margin-right: auto;
-  margin-left: 7%;
+  margin-left: 0px;
 }
 .s2 {
   text-align: right;
   margin-left: auto;
-  margin-right: 7%;
+  margin-right: 0px;
 }
 .t1 {
   margin-right: auto;
@@ -103,7 +104,7 @@ table {
   margin-top: 10pt;
   text-align: center;
   background-color: #222222;
-  width: 500px;
+  width: 70%;
 }
 table th {
   /*table内のthに対して*/
@@ -122,6 +123,43 @@ table td {
 
 .presentation {
   scroll-margin-bottom: 10px;
+}
+
+.s1 .video-wrap {
+  text-align: left;
+  margin-left: 0px;
+  margin-right: auto;
+  max-width: calc(75%);
+}
+
+.s2 .video-wrap {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0px;
+  max-width: calc(75%);
+}
+
+.video {
+  position: relative;
+  width:100%; 
+  height:0; 
+  padding-top: 56.25%; 
+}
+
+.s1 .video iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.s2 .video iframe{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes fadein-anim {
@@ -360,19 +398,7 @@ table td {
     opacity: 1;
   }
 }
-@keyframes pulse {
-  0% {
-    font-size: 500%;
-  }
 
-  50% {
-    font-size: 550%;
-  }
-
-  100% {
-    font-size: 500%;
-  }
-}
 @keyframes usebackgroundcolor {
   0% {
   }
