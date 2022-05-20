@@ -100,7 +100,7 @@ table {
   margin-top: 10pt;
   text-align: center;
   background-color: #222222;
-  width: 500px;
+  width: 70%;
 }
 table th {
   /*table内のthに対して*/
@@ -125,14 +125,14 @@ table td {
   text-align: left;
   margin-left: 0px;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 75%;
 }
 
 .s2 .video-wrap {
   text-align: right;
   margin-left: auto;
   margin-right: 0px;
-  max-width: 80%;
+  max-width: 75%;
 }
 
 .video {

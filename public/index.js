@@ -20,7 +20,7 @@ window.setInterval(function(){
 
 window.setTimeout(function(){
     makeShadow(0, -10);
-    delayx = window.innerWidth / 2;
+    delayx = $(window).width() / 2;
     delayy = window.innerHeight / 2 + 40;
     makeshadow = true;
 }, 3400);
@@ -33,7 +33,7 @@ window.setTimeout(function(){
 
 function makeShadowWithMouse() {
     if(mousex >= 0 && mousey >= 0){
-        var width = window.innerWidth;
+        var width = $(window).width();
         var height = window.innerHeight;
         delayvelocity = Math.sqrt((mousex-delayx)*(mousex-delayx)+(mousey-delayy)*(mousey-delayy)) / 10000;
         delayx = (delayx + mousex * delayvelocity) / (1 + delayvelocity);
@@ -50,9 +50,9 @@ function changeMouseXY(event) {
     }
 }
 
-function resizeFontSize(){
+function resizeFont(){
     var aspectratio = 7;
-    var width = window.innerWidth;
+    var width = $(window).width();
     var logoitemtextwhole = document.getElementById("logoitemtextwhole");
     var logoitemtext = document.getElementsByClassName("logoitemtext");
     logoitemtextwhole.style.fontSize = width * 0.7 / aspectratio + "px"
@@ -64,11 +64,11 @@ function resizeFontSize(){
 function initHTML(){
     window.onmousemove = changeMouseXY;
 
-    window.onresize = resizeFontSize;
+    window.onresize = resizeFont;
 }
 
 function initDOM(){
-    resizeFontSize();
+    resizeFont();
 }
 
 window.onload = function() {
