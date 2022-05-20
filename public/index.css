@@ -92,10 +92,10 @@ li:nth-child(2) {
   margin: 0 30px;
 }
 
-/* p {
+p {
   margin-left: 10%;
   margin-right: 10%;
-} */
+}
 
 .icons img {
   border-radius: 20px;
@@ -504,6 +504,8 @@ table td {
   color: #fff;
   transition: 0.3s0;
   border-radius: 25px;
+  width: fit-content;
+  font-size: 100%;
 }
 
 /* マウスオーバー時 */

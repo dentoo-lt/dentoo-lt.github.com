@@ -14,6 +14,7 @@ function makeShadow(x, y) {
 }
 
 window.setInterval(function () {
+  localStorage.setItem("nowscroll", String(window.scrollY));
   if (makeshadow) {
     makeShadowWithMouse();
   }
@@ -34,7 +35,7 @@ window.setTimeout(function () {
 
 function makeShadowWithMouse() {
   if (mousex >= 0 && mousey >= 0) {
-    var width = $(window).width();
+    var width = window.innerWidth;
     var height = window.innerHeight;
     delayvelocity =
       Math.sqrt(
@@ -44,6 +45,7 @@ function makeShadowWithMouse() {
     delayx = (delayx + mousex * delayvelocity) / (1 + delayvelocity);
     delayy = (delayy + mousey * delayvelocity) / (1 + delayvelocity);
     makeShadow((width / 2 - delayx) / 4, (height / 2 - delayy) / 4);
+    console.log(1);
   }
 }
 
@@ -66,19 +68,16 @@ function resizeFont() {
   }
 }
 
-function initHTML() {
+function initDOM() {
+  resizeFont();
+  document.body.scrollTop = Number(localStorage.getItem("nowscroll"));
+  console.log(1);
   window.onmousemove = changeMouseXY;
 
   window.onresize = resizeFont;
 }
 
-function initDOM() {
-  resizeFont();
-}
-
-window.onload = function () {
-  initHTML();
-};
+window.onload = function () {};
 
 $(document).ready(() => {
   initDOM();
