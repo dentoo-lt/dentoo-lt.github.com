@@ -114,3 +114,18 @@ window.onload = function () {
 $(window).on("orientationchange", function () {
   location.reload();
 });
+
+function deleteiframe() {
+  var test = document.getElementById("test");
+  test.style.visibility = "hidden";
+  // var whole = document.getElementById("whole");
+  // whole.style.filter = "";
+  $("#whole").css("filter", "");
+}
+
+function displayiframe(url) {
+  var whole = document.getElementById("whole");
+  whole.style.filter = "blur(20px) grayscale(100%)";
+  var test = document.getElementById("test");
+  test.style.visibility = "visible";
+}

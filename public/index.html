@@ -198,7 +198,8 @@
           <td>tonphy</td>
         </tr>
         <tr>
-          <td><a href="https://youtu.be/hKc5J95OHCk?t=6213" target="_blank">おわりに</a></td>
+          <td><a onclick="displayiframe(this.value);" value="https://youtu.be/hKc5J95OHCk?t=6213"
+              target=" _blank">おわりに</a></td>
           <td>Terry</td>
         </tr>
       </table>
@@ -214,6 +215,9 @@
     <a href="#page_top" class="page_top_btn">Top</a>
   </div>
   <div class="video-wrap" id="test">
+    <a onclick="deleteiframe();" id="delete">
+      <img src="images/X.png">
+    </a>
     <div class="video">
       <iframe src="https://www.youtube.com/embed/hKc5J95OHCk?start=272" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
