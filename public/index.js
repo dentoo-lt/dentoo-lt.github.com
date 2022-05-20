@@ -27,7 +27,7 @@ window.setTimeout(function(){
 
 window.setTimeout(function(){
     if(window.scrollY <= 10){
-        $('html').animate({ scrollTop: 700 }, 1000, 'swing');
+        $('html,body').animate({ scrollTop: window.innerHeight }, 1000, 'swing');
     }
 }, 5000);
 
@@ -84,12 +84,13 @@ window.onload=function(){
     var scroll = document.querySelectorAll('.up');
 
     var Animation = function() {
-    for(var i = 0; i < scroll.length; i++) {
-    var triggerMargin = 80;
-    if (window.innerHeight > scroll[i].getBoundingClientRect().top + triggerMargin) {
-    scroll[i].classList.add('show');
-    }
-    }
+        for(var i = 0; i < scroll.length; i++) {
+            var triggerMargin = 80;
+            if (window.innerHeight > scroll[i].getBoundingClientRect().top + triggerMargin) {
+                scroll[i].classList.add('show');
+            }
+        }
     }
     window.addEventListener('scroll', Animation);
+    Animation();
 }
