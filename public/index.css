@@ -27,6 +27,9 @@ html {
   background-color: #222222;
   border-radius: 30px;
 }
+.menu-btn:hover{
+  background-color: red;
+}
 .menu-btn span,
 .menu-btn span:before,
 .menu-btn span:after {
@@ -581,9 +584,8 @@ table td {
   font-weight: bold;
   padding: 0.7em;
   text-align: center;
-  background: rgb(255, 0, 0);
+  background: #444444;
   color: #fff;
-  transition: 0.3s0;
   border-radius: 25px;
   width: fit-content;
   font-size: 100%;
