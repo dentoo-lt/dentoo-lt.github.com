@@ -73,9 +73,9 @@ function resizeFont() {
 
 function resizeiflame() {
   var width = $(window).width();
-  var test = document.getElementById("test");
-  test.style.width = width * 0.7 + "px";
-  test.style.height = width * 0.7 * 0.5625 + "px";
+  var videowrap = document.getElementById("video-wrap");
+  videowrap.style.width = width * 0.7 + "px";
+  videowrap.style.height = width * 0.7 * 0.5625 + "px";
 }
 
 function initDOM() {
@@ -118,8 +118,8 @@ $(window).on("orientationchange", function () {
 });
 
 function deleteiframe() {
-  var test = document.getElementById("test");
-  test.style.visibility = "hidden";
+  var videowrap = document.getElementById("video-wrap");
+  videowrap.style.visibility = "hidden";
   var whole = document.getElementById("whole");
   whole.style.filter = "";
   var videoplayerbox = document.getElementById("videoplayer");
@@ -162,8 +162,8 @@ function displayiframe(url, time) {
 		if(playvideo){
 			var whole = document.getElementById("whole");
 			whole.style.filter = "blur(10px) grayscale(100%)";
-			var test = document.getElementById("test");
-			test.style.visibility = "visible";
+			var videowrap = document.getElementById("video-wrap");
+			videowrap.style.visibility = "visible";
 			var videoplayerbox = document.getElementById("videoplayerbox");
 			if(mute){
 				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1&mute=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>"; 
