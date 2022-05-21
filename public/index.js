@@ -193,7 +193,7 @@ jQuery(function($){
 jQuery(function($){
   $(window).on('scroll', function(){
     var obj = document.getElementsByClassName("page_top_btn")[0];
-    if ($(window).scrollTop() > 500) {
+    if ($(window).scrollTop() > 300) {
       obj.style.opacity = 100;
     } else {
       obj.style.opacity = 0;
