@@ -4,6 +4,10 @@ var delayy = 0;
 var delayvelocity = 0;
 var mousex = -1;
 var mousey = -1;
+var mute = true;
+var displaydialog = true;
+var playvideo = true;  
+var clicked = false;
 
 function makeShadow(x, y) {
   var logoitemtext = document.getElementsByClassName("logoitemtext");
@@ -45,7 +49,6 @@ function makeShadowWithMouse() {
     delayx = (delayx + mousex * delayvelocity) / (1 + delayvelocity);
     delayy = (delayy + mousey * delayvelocity) / (1 + delayvelocity);
     makeShadow((width / 2 - delayx) / 4, (height / 2 - delayy) / 4);
-    console.log(1);
   }
 }
 
@@ -78,7 +81,6 @@ function resizeiflame() {
 function initDOM() {
   resizeFont();
   document.body.scrollTop = Number(localStorage.getItem("nowscroll"));
-  console.log(1);
   window.onmousemove = changeMouseXY;
 
   window.onresize = resizeFont;
@@ -118,14 +120,63 @@ $(window).on("orientationchange", function () {
 function deleteiframe() {
   var test = document.getElementById("test");
   test.style.visibility = "hidden";
-  // var whole = document.getElementById("whole");
-  // whole.style.filter = "";
-  $("#whole").css("filter", "");
+  var whole = document.getElementById("whole");
+  whole.style.filter = "";
+  var videoplayerbox = document.getElementById("videoplayer");
+  videoplayerbox.remove();
 }
 
-function displayiframe(url) {
-  var whole = document.getElementById("whole");
-  whole.style.filter = "blur(20px) grayscale(100%)";
-  var test = document.getElementById("test");
-  test.style.visibility = "visible";
+
+
+function displayiframe(url, time) {
+	let dontask = document.getElementById("dontask");
+	if(displaydialog){
+		var dialog = document.getElementById("dialog");
+		dialog.style.visibility = "visible";
+
+    dialog.mute.addEventListener("click", () => {
+      mute = true;
+			displaydialog = !(dontask.checked);
+			clicked = true;
+    });
+    dialog.unmute.addEventListener("click", () => {
+      mute = false;
+			displaydialog = !(dontask.checked);
+			clicked = true;
+    });
+    dialog.cancel.addEventListener("click", () => {
+      playvideo = false;
+			dontask.checked = false;
+			clicked = true;
+    });
+	}
+
+	const intervalId = setInterval(()=>{
+		if(!clicked && displaydialog){
+			return;
+		}
+		clearInterval(intervalId);
+		
+		var dialog = document.getElementById("dialog");
+		dialog.style.visibility = "hidden";
+		if(playvideo){
+			var whole = document.getElementById("whole");
+			whole.style.filter = "blur(10px) grayscale(100%)";
+			var test = document.getElementById("test");
+			test.style.visibility = "visible";
+			var videoplayerbox = document.getElementById("videoplayerbox");
+			if(mute){
+				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1&mute=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>"; 
+			}else{
+				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>"; 
+			}
+		}
+		
+		if(displaydialog){
+			mute = true;
+			clicked = false;
+			playvideo = true;
+		}
+	}, 200)
+	
 }
