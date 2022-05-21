@@ -182,19 +182,21 @@ function displayiframe(url, time) {
 
 jQuery(function($){
   $(window).on('scroll', function(){
-    if ($(window).scrollTop() > 50) {
-      $('.page_top_btn').fadeIn(600);
+    var obj = document.getElementsByClassName("menu-btn")[0];
+    if ($(window).scrollTop() > 300) {
+      obj.style.opacity = 100;
     } else {
-      $('.page_top_btn').fadeOut(600);
+      obj.style.opacity = 0;
     }
   });
 });
 jQuery(function($){
   $(window).on('scroll', function(){
-    if ($(window).scrollTop() > 50) {
-      $('.menu-btn').fadeIn(600);
+    var obj = document.getElementsByClassName("page_top_btn")[0];
+    if ($(window).scrollTop() > 500) {
+      obj.style.opacity = 100;
     } else {
-      $('.menu-btn').fadeOut(600);
+      obj.style.opacity = 0;
     }
   });
 });

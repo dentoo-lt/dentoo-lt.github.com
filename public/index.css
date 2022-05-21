@@ -26,6 +26,7 @@ html {
   z-index: 200;
   background-color: #222222;
   border-radius: 30px;
+  opacity: 0;
 }
 .menu-btn:hover{
   background-color: red;
@@ -589,6 +590,7 @@ table td {
   border-radius: 25px;
   width: fit-content;
   font-size: 100%;
+  opacity: 0;
 }
 
 /* マウスオーバー時 */
