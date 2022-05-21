@@ -6,7 +6,7 @@ var mousex = -1;
 var mousey = -1;
 var mute = true;
 var displaydialog = true;
-var playvideo = true;  
+var playvideo = true;
 var clicked = false;
 
 function makeShadow(x, y) {
@@ -156,7 +156,7 @@ function displayiframe(url, time) {
 			return;
 		}
 		clearInterval(intervalId);
-		
+
 		var dialog = document.getElementById("dialog");
 		dialog.style.visibility = "hidden";
 		if(playvideo){
@@ -166,17 +166,35 @@ function displayiframe(url, time) {
 			videowrap.style.visibility = "visible";
 			var videoplayerbox = document.getElementById("videoplayerbox");
 			if(mute){
-				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1&mute=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>"; 
+				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1&mute=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>";
 			}else{
-				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>"; 
+				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>";
 			}
 		}
-		
+
 		if(displaydialog){
 			mute = true;
 			clicked = false;
 			playvideo = true;
 		}
 	}, 200)
-	
 }
+
+jQuery(function($){
+  $(window).on('scroll', function(){
+    if ($(window).scrollTop() > 50) {
+      $('.page_top_btn').fadeIn(600);
+    } else {
+      $('.page_top_btn').fadeOut(600);
+    }
+  });
+});
+jQuery(function($){
+  $(window).on('scroll', function(){
+    if ($(window).scrollTop() > 50) {
+      $('.menu-btn').fadeIn(600);
+    } else {
+      $('.menu-btn').fadeOut(600);
+    }
+  });
+});
