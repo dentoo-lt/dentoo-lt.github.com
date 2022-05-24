@@ -86,7 +86,7 @@ html {
 
 .menu-content {
   text-align: center;
-  width: fit-content;
+  width: 200px;
   height: 100vh;
   padding-top: 50px;
   padding-left: 0%;
@@ -96,8 +96,9 @@ html {
   top: 0;
   right: -100%; /*rightの値を変更してメニューを画面外へ*/
   transition: all 1s; /*アニメーション設定*/
-  background-color: #222222;
+  background-color: #444444;
   z-index: 150;
+  white-space: nowrap;
 }
 .menu-content > li{
   text-align: center;

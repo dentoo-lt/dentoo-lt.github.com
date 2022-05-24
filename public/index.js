@@ -90,10 +90,8 @@ function initDOM() {
 }
 
 window.onload = function () {
-  console.log("10")
   fadein();
   test();
-  console.log ("5")
 };
 
 $(document).ready(() => {
@@ -185,6 +183,7 @@ function displayiframe(url, time) {
 	}, 200)
 }
 
+// ボタン表示
 jQuery(function($){
   $(window).on('scroll', function(){
     var obj = document.getElementsByClassName("menu-btn")[0];
@@ -206,19 +205,29 @@ jQuery(function($){
   });
 });
 
+// ボタン色
 function test(){
 document.getElementById("menu_btn").addEventListener("touchstart",function(){
   document.getElementById("menu_btn").style.backgroundColor = "red";
-  console.log("1")
 })
 document.getElementsByClassName("page_top_btn")[0].addEventListener("touchstart", function(){
   document.getElementsByClassName("page_top_btn")[0].style.backgroundColor = "red";
 })
 document.getElementById("menu_btn").addEventListener("touchend", function(){
   document.getElementById("menu_btn").style.backgroundColor = "black";
-  console.log("2")
 })
 document.getElementsByClassName("page_top_btn")[0].addEventListener("touchend",function(){
   document.getElementsByClassName("page_top_btn")[0].style.backgroundColor = "black";
 })
+}
+
+// メニューで指定位置に飛ぶ
+function page_top (){
+  document.getElementById("page_top").scrollIntoView(true)
+}
+function next (){
+  document.getElementById("next").scrollIntoView(true)
+}
+function past (){
+  document.getElementById("past").scrollIntoView(true)
 }
