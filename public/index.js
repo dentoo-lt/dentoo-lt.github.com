@@ -89,14 +89,19 @@ function initDOM() {
   window.onresize = resizeiflame;
 }
 
-window.onload = function () {};
+window.onload = function () {
+  console.log("10")
+  fadein();
+  test();
+  console.log ("5")
+};
 
 $(document).ready(() => {
   initDOM();
 });
 
 /* fadein */
-window.onload = function () {
+function fadein () {
   var scroll = document.querySelectorAll(".up");
 
   var Animation = function () {
@@ -184,9 +189,9 @@ jQuery(function($){
   $(window).on('scroll', function(){
     var obj = document.getElementsByClassName("menu-btn")[0];
     if ($(window).scrollTop() > 300) {
-      obj.style.opacity = 100;
+      obj.style.visibility = "visible";
     } else {
-      obj.style.opacity = 0;
+      obj.style.visibility = "hidden";
     }
   });
 });
@@ -194,9 +199,26 @@ jQuery(function($){
   $(window).on('scroll', function(){
     var obj = document.getElementsByClassName("page_top_btn")[0];
     if ($(window).scrollTop() > 300) {
-      obj.style.opacity = 100;
+      obj.style.visibility = "visible";
     } else {
-      obj.style.opacity = 0;
+      obj.style.visibility = "hidden";
     }
   });
 });
+
+function test(){
+document.getElementById("menu_btn").addEventListener("touchstart",function(){
+  document.getElementById("menu_btn").style.backgroundColor = "red";
+  console.log("1")
+})
+document.getElementsByClassName("page_top_btn")[0].addEventListener("touchstart", function(){
+  document.getElementsByClassName("page_top_btn")[0].style.backgroundColor = "red";
+})
+document.getElementById("menu_btn").addEventListener("touchend", function(){
+  document.getElementById("menu_btn").style.backgroundColor = "black";
+  console.log("2")
+})
+document.getElementsByClassName("page_top_btn")[0].addEventListener("touchend",function(){
+  document.getElementsByClassName("page_top_btn")[0].style.backgroundColor = "black";
+})
+}

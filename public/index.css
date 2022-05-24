@@ -26,7 +26,7 @@ html {
   z-index: 200;
   background-color: #222222;
   border-radius: 30px;
-  opacity: 0;
+  visibility: hidden;
 }
 .menu-btn:hover{
   background-color: red;
@@ -85,22 +85,27 @@ html {
 }
 
 .menu-content {
-  width: 100%;
-  padding: 6px;
+  text-align: center;
+  width: fit-content;
+  height: 100vh;
+  padding-top: 50px;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-bottom: 0%;
   position: fixed;
   top: 0;
-  top: -100%; /*leftの値を変更してメニューを画面外へ*/
+  right: -100%; /*rightの値を変更してメニューを画面外へ*/
   transition: all 1s; /*アニメーション設定*/
   background-color: #222222;
-  text-align: center;
   z-index: 150;
 }
-#menu-btn-check:checked ~ .menu-content {
-  top: 0; /*メニューを画面内へ*/
-}
-ul {
-  display: flex;
+.menu-content > li{
   text-align: center;
+  padding-top: 20px;
+  font-size:larger;
+}
+#menu-btn-check:checked ~ .menu-content {
+  right: 0; /*メニューを画面内へ*/
 }
 
 body {
@@ -593,7 +598,7 @@ table td {
   border-radius: 25px;
   width: fit-content;
   font-size: 100%;
-  opacity: 0;
+  visibility: hidden;
 }
 
 /* マウスオーバー時 */
