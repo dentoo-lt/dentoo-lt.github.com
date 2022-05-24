@@ -18,9 +18,9 @@
       <label for="menu-btn-check" class="menu-btn" id="menu_btn"><span></span></label>
       <!--ここからメニュー-->
       <div class="menu-content">
-        <li><a href="#page_top">Dentoo.LTとは</a></li>
-        <li><a href="#next">次回について</a></li>
-        <li><a href="#past">過去の様子</a></li>
+        <li><a onclick="(function(){page_top();})();">Dentoo.LTとは</a></li>
+        <li><a onclick="(function(){next();})();">次回について</a></li>
+        <li><a onclick="(function(){past();})();">過去の様子</a></li>
       </div>
       <!--ここまでメニュー-->
     </div>
@@ -232,7 +232,7 @@
       <br>発表希望者はこちらの<a href="https://dentoo.lt/docs/lt-guideline.html">発表者向け資料</a>をお読みください。
     </div>
   </div>
-  <a href="#page_top" class="page_top_btn">Top</a>
+  <a onclick="(function(){page_top();})();" class="page_top_btn">Top</a>
   <div id="video-wrap">
     <a onclick="deleteiframe();" id="delete">
       <img src="images/X.png">
