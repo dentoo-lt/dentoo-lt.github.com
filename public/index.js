@@ -92,6 +92,7 @@ function initDOM() {
 window.onload = function () {
   fadein();
   test();
+  document.getElementById("whole").addEventListener("mousedown", deletemenu);
 };
 
 $(document).ready(() => {
@@ -230,4 +231,9 @@ function next (){
 }
 function past (){
   document.getElementById("past").scrollIntoView(true)
+}
+
+//メニューの外側をクリックしてメニューを閉じる
+function deletemenu(){
+  document.getElementById("menu-btn-check").checked = false;
 }
