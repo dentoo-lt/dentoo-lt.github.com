@@ -79,10 +79,10 @@ function resizeiflame() {
 }
 
 function initDOM() {
-  resizeFont();
   document.body.scrollTop = Number(localStorage.getItem("nowscroll"));
   window.onmousemove = changeMouseXY;
 
+  resizeFont();
   window.onresize = resizeFont;
 
   resizeiflame();
@@ -117,8 +117,10 @@ function fadein () {
   window.addEventListener("scroll", Animation);
   Animation();
 };
-$(window).on("orientationchange", function () {
-  location.reload();
+$(window).on("orientationchange", function() {
+  window.setTimeout(function () {
+    resizeFont();
+  }, 100);
 });
 
 function deleteiframe() {
