@@ -24,11 +24,14 @@ html {
   justify-content: center;
   align-items: center;
   z-index: 200;
-  background-color: #222222;
+  background-color: #333333;
   border-radius: 30px;
   visibility: hidden;
 }
 .menu-btn:hover{
+  background-color: #444444;
+}
+.menu-btn:active{
   background-color: red;
 }
 .menu-btn span,
@@ -594,7 +597,7 @@ table td {
   font-weight: bold;
   padding: 0.7em;
   text-align: center;
-  background: #444444;
+  background: #333333;
   color: #fff;
   border-radius: 25px;
   width: fit-content;
@@ -604,7 +607,12 @@ table td {
 
 /* マウスオーバー時 */
 .page_top_btn:hover {
-  background: rgb(255, 0, 0, 0.8);
+  background: #444444;
+  color: rgb(255, 255, 255, 0.8);
+  border-radius: 25px;
+}
+.page_top_btn:active {
+  background: red;
   color: rgb(255, 255, 255, 0.8);
   border-radius: 25px;
 }
