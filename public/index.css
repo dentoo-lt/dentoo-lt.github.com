@@ -28,12 +28,6 @@ html {
   border-radius: 30px;
   visibility: hidden;
 }
-.menu-btn:hover{
-  background-color: #444444;
-}
-.menu-btn:active{
-  background-color: red;
-}
 .menu-btn span,
 .menu-btn span:before,
 .menu-btn span:after {
@@ -50,6 +44,12 @@ html {
 }
 .menu-btn span:after {
   top: 8px;
+}
+.menu-btn:hover{
+  background-color: #FFFFFF;
+}
+.menu-btn:active{
+  background-color: red;
 }
 #menu-btn-check:checked ~ .menu-btn span {
   background-color: rgba(
@@ -607,8 +607,8 @@ table td {
 
 /* マウスオーバー時 */
 .page_top_btn:hover {
-  background: #444444;
-  color: rgb(255, 255, 255, 0.8);
+  background: white;
+  color: #333333;
   border-radius: 25px;
 }
 .page_top_btn:active {
