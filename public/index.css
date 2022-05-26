@@ -48,6 +48,11 @@ html {
 .menu-btn:hover{
   background-color: #FFFFFF;
 }
+.menu-btn:hover span,
+.menu-btn:hover span:before,
+.menu-btn:hover span:after{
+  background-color:  #333333;
+}
 .menu-btn:active{
   background-color: red;
 }
@@ -607,8 +612,8 @@ table td {
 
 /* マウスオーバー時 */
 .page_top_btn:hover {
-  background: white;
-  color: #333333;
+  background: red;
+  color: white;
   border-radius: 25px;
 }
 .page_top_btn:active {
