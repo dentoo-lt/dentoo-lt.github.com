@@ -53,9 +53,6 @@ html {
 .menu-btn:hover span:after{
   background-color:  #333333;
 }
-.menu-btn:active{
-  background-color: red;
-}
 #menu-btn-check:checked ~ .menu-btn span {
   background-color: rgba(
     255,
