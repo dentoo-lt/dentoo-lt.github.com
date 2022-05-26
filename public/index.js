@@ -4,10 +4,10 @@ var delayy = 0;
 var delayvelocity = 0;
 var mousex = -1;
 var mousey = -1;
-var mute = true;
-var displaydialog = true;
 var playvideo = true;
 var clicked = false;
+if(!sessionStorage.getItem("mute"))sessionStorage.setItem("mute", "true");
+if(!sessionStorage.getItem("displaydialog"))sessionStorage.setItem("displaydialog", "true");
 
 function makeShadow(x, y) {
   var logoitemtext = document.getElementsByClassName("logoitemtext");
@@ -91,7 +91,7 @@ function initDOM() {
 
 window.onload = function () {
   fadein();
-  test();
+  touchMenubtn();
   document.getElementById("whole").addEventListener("mousedown", deletemenu);
 };
 
@@ -136,18 +136,18 @@ function deleteiframe() {
 
 function displayiframe(url, time) {
 	let dontask = document.getElementById("dontask");
-	if(displaydialog){
+	if(sessionStorage.getItem("displaydialog") == "true"){
 		var dialog = document.getElementById("dialog");
 		dialog.style.visibility = "visible";
 
     dialog.mute.addEventListener("click", () => {
-      mute = true;
-			displaydialog = !(dontask.checked);
+      sessionStorage.setItem("mute", "true");
+      sessionStorage.setItem("displaydialog", (!(dontask.checked) ? "true" : "false"));
 			clicked = true;
     });
     dialog.unmute.addEventListener("click", () => {
-      mute = false;
-			displaydialog = !(dontask.checked);
+      sessionStorage.setItem("mute", "false");
+      sessionStorage.setItem("displaydialog", (!(dontask.checked) ? "true" : "false"));
 			clicked = true;
     });
     dialog.cancel.addEventListener("click", () => {
@@ -158,7 +158,7 @@ function displayiframe(url, time) {
 	}
 
 	const intervalId = setInterval(()=>{
-		if(!clicked && displaydialog){
+		if(!clicked && sessionStorage.getItem("displaydialog") == "true"){
 			return;
 		}
 		clearInterval(intervalId);
@@ -171,14 +171,15 @@ function displayiframe(url, time) {
 			var videowrap = document.getElementById("video-wrap");
 			videowrap.style.visibility = "visible";
 			var videoplayerbox = document.getElementById("videoplayerbox");
-			if(mute){
+			if(sessionStorage.getItem("mute") == "true"){
 				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1&mute=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>";
 			}else{
 				videoplayerbox.innerHTML =  "<iframe id=\"videoplayer\" src=\"https://www.youtube.com/embed/" + url + "?start=" + time + "&autoplay=1&enablejsapi=1\" title=\"YouTube video player\" frameborder=\"0\"allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"allowfullscreen></iframe>";
 			}
 		}
 
-		if(displaydialog){
+		if(sessionStorage.getItem("displaydialog") == "true"){
+      sessionStorage.setItem("mute", "true");
 			mute = true;
 			clicked = false;
 			playvideo = true;
@@ -209,7 +210,7 @@ jQuery(function($){
 });
 
 // ボタン色
-function test(){
+function touchMenubtn(){
 document.getElementById("menu_btn").addEventListener("touchstart",function(){
   document.getElementById("menu_btn").style.backgroundColor = "red";
 })
