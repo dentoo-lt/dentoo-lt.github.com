@@ -212,16 +212,16 @@ jQuery(function($){
 // ボタン色
 function touchMenubtn(){
 document.getElementById("menu_btn").addEventListener("touchstart",function(){
-  document.getElementById("menu_btn").style.backgroundColor = "red";
+  document.getElementById("menu_btn").style.backgroundColor = "#555555";
 })
-document.getElementsByClassName("page_top_btn")[0].addEventListener("touchstart", function(){
-  document.getElementsByClassName("page_top_btn")[0].style.backgroundColor = "red";
+document.getElementsByClassName("pagetop")[0].addEventListener("touchstart", function(){
+  document.getElementsByClassName("pagetop")[0].style.backgroundColor = "#555555";
 })
 document.getElementById("menu_btn").addEventListener("touchend", function(){
   document.getElementById("menu_btn").style.backgroundColor = "black";
 })
-document.getElementsByClassName("page_top_btn")[0].addEventListener("touchend",function(){
-  document.getElementsByClassName("page_top_btn")[0].style.backgroundColor = "black";
+document.getElementsByClassName("pagetop")[0].addEventListener("touchend",function(){
+  document.getElementsByClassName("pagetop")[0].style.backgroundColor = "black";
 })
 }
 
