@@ -677,7 +677,7 @@ html {
   position: absolute;
 }
 .pagetop span {
-  top: 20px%;
+  top: 20px;
   right: 7.6px;
   transform: rotate(50deg);
 }
