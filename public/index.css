@@ -687,6 +687,7 @@ html {
   z-index: 200;
   background-color: #333333;
   border-radius: 30px;
+  visibility: hidden;
 }
 .pagetop span,
 .pagetop span:after {
