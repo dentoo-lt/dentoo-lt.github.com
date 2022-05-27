@@ -46,12 +46,7 @@ html {
   top: 8px;
 }
 .menu-btn:hover{
-  background-color: #FFFFFF;
-}
-.menu-btn:hover span,
-.menu-btn:hover span:before,
-.menu-btn:hover span:after{
-  background-color:  #333333;
+  background-color: #555555;
 }
 #menu-btn-check:checked ~ .menu-btn span {
   background-color: rgba(
@@ -701,7 +696,7 @@ html {
 }
 .pagetop span {
   top: 18px;
-  right: 5.5px;
+  right: 5.8px;
   transform: rotate(50deg);
 }
 .pagetop span:after {
@@ -710,9 +705,9 @@ html {
   transform: rotate(-100deg);
 }
 .pagetop:hover{
-  background-color: #FFFFFF;
+  background-color: #555555;
 }
 .pagetop:hover span,
 .pagetop:hover span:after{
-  background-color:  #333333;
+  background-color:  white;
 }
