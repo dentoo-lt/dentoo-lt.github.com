@@ -19,66 +19,46 @@ html {
   top: 10px;
   right: 10px;
   display: flex;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   justify-content: center;
   align-items: center;
   z-index: 200;
   background-color: #333333;
-  border-radius: 30px;
   visibility: hidden;
 }
 .menu-btn span,
-.menu-btn span:before,
 .menu-btn span:after {
   content: "";
   display: block;
-  height: 3px;
-  width: 25px;
+  height: 2px;
   border-radius: 3px;
   background-color: #ffffff;
   position: absolute;
 }
-.menu-btn span:before {
-  bottom: 8px;
+.menu-btn span{
+  width: 50%;
+  top:14.5px;
 }
 .menu-btn span:after {
+  width: 70%;
   top: 8px;
 }
 .menu-btn:hover{
   background-color: #555555;
+  transform: scale(1.05);
 }
 #menu-btn-check:checked ~ .menu-btn span {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0
-  ); /*メニューオープン時は真ん中の線を透明にする*/
-}
-#menu-btn-check:checked ~ .menu-btn span::before {
-  bottom: 0;
+  width: 45%;
+  top: 18px;
   transform: rotate(45deg);
+  transition: all 0.5s 0s ease;
 }
 #menu-btn-check:checked ~ .menu-btn span::after {
+  width: 100%;
   top: 0;
-  transform: rotate(-45deg);
-}
-#menu-btn-check:checked ~ .menu-btn span {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0
-  ); /*メニューオープン時は真ん中の線を透明にする*/
-}
-#menu-btn-check:checked ~ .menu-btn span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-#menu-btn-check:checked ~ .menu-btn span::after {
-  top: 0;
-  transform: rotate(-45deg);
+  transform: rotate(-90deg);
+  transition: all 0.5s 0s ease;
 }
 #menu-btn-check {
   display: none;
@@ -141,8 +121,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
-a{
-  text-decoration: underline;
+.menu-content a,
+.t1 a,
+.t2 a{
+  padding: 5px;
+  padding-top: 8px;
 }
 a:link {
   color: azure;
@@ -151,10 +134,10 @@ a:visited {
   color: beige;
 }
 a:hover {
-  color: #9daada;
+  background-color: #555555;
 }
 a:active {
-  color: #77aa77;
+  background-color: #666666;
 }
 
 h1 {
@@ -681,34 +664,29 @@ html {
   align-items: center;
   z-index: 200;
   background-color: #333333;
-  border-radius: 30px;
   visibility: hidden;
 }
 .pagetop span,
 .pagetop span:after {
   content: "";
   display: block;
-  height: 3px;
+  height: 2px;
   width: 15px;
   border-radius: 3px;
   background-color: #ffffff;
   position: absolute;
 }
 .pagetop span {
-  top: 18px;
-  right: 8.2px;
+  top: 20px%;
+  right: 7.6px;
   transform: rotate(50deg);
 }
 .pagetop span:after {
-  top: 6.1px;
-  right: 5.3px;
+  top: 7.3px;
+  right: 6.3px;
   transform: rotate(-100deg);
 }
 .pagetop:hover{
   background-color: #555555;
-  transform:scale(1.1);
+  transform:scale(1.03);
 }
-/* .pagetop:hover span,
-.pagetop:hover span:after{
-  background-color:  white;
-} */
