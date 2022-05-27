@@ -689,25 +689,27 @@ html {
   content: "";
   display: block;
   height: 3px;
-  width: 18px;
+  width: 15px;
   border-radius: 3px;
   background-color: #ffffff;
   position: absolute;
 }
 .pagetop span {
   top: 18px;
-  right: 5.8px;
+  right: 8.2px;
   transform: rotate(50deg);
 }
 .pagetop span:after {
-  top: 7.7px;
-  right: 6.2px;
+  top: 6.1px;
+  right: 5.3px;
   transform: rotate(-100deg);
 }
 .pagetop:hover{
   background-color: #555555;
+  transform:scale(1.1);
+  box-shadow: 0 2px 3px #666666;
 }
-.pagetop:hover span,
+/* .pagetop:hover span,
 .pagetop:hover span:after{
   background-color:  white;
-}
+} */
