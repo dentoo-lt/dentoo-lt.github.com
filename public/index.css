@@ -591,33 +591,7 @@ table td {
 .op {
   transform: translate(0, 100px);
 }
-/* トップへ戻るボタン */
-.page_top_btn {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-weight: bold;
-  padding: 0.7em;
-  text-align: center;
-  background: #333333;
-  color: #fff;
-  border-radius: 25px;
-  width: fit-content;
-  font-size: 100%;
-  visibility: hidden;
-}
 
-/* マウスオーバー時 */
-.page_top_btn:hover {
-  background: red;
-  color: white;
-  border-radius: 25px;
-}
-.page_top_btn:active {
-  background: red;
-  color: rgb(255, 255, 255, 0.8);
-  border-radius: 25px;
-}
 /* CSSコード */
 html {
   scroll-behavior: smooth;
@@ -698,4 +672,46 @@ html {
   background-color: #5c5c5c;
   color: white;
   border-radius: 5px;
+}
+
+/* ページトップボタン */
+.pagetop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  background-color: #333333;
+  border-radius: 30px;
+}
+.pagetop span,
+.pagetop span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 18px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.pagetop span {
+  top: 18px;
+  right: 5.5px;
+  transform: rotate(50deg);
+}
+.pagetop span:after {
+  top: 7.7px;
+  right: 6.2px;
+  transform: rotate(-100deg);
+}
+.pagetop:hover{
+  background-color: #FFFFFF;
+}
+.pagetop:hover span,
+.pagetop:hover span:after{
+  background-color:  #333333;
 }
