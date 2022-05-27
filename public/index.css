@@ -707,7 +707,6 @@ html {
 .pagetop:hover{
   background-color: #555555;
   transform:scale(1.1);
-  box-shadow: 0 2px 3px #666666;
 }
 /* .pagetop:hover span,
 .pagetop:hover span:after{
