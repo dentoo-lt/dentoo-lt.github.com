@@ -121,11 +121,9 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.menu-content a,
 .t1 a,
 .t2 a{
-  padding: 5px;
-  padding-top: 8px;
+  background:linear-gradient(transparent 40%, #666 100%);
 }
 a:link {
   color: azure;
@@ -134,11 +132,12 @@ a:visited {
   color: beige;
 }
 a:hover {
-  background-color: #555555;
+  background-color: #666;
 }
-a:active {
-  background-color: #666666;
-}
+/* a:active {
+  background:linear-gradient(transparent 100%, #666 0%);
+
+} */
 
 h1 {
   font-size: 25pt;
