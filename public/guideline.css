@@ -22,6 +22,12 @@ body {
     box-sizing: border-box;
 }
 
+#contents a{
+  background:linear-gradient(transparent 10%, #777 100%);
+}
+a{
+  text-decoration: none;
+}
 a:link {
     color: azure;
 }
@@ -41,6 +47,47 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 戻ボタン */
+#backbtn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  background-color: #333333;
+  border-radius: 999px;
+}
+#backbtn span,
+#backbtn span:before,
+#backbtn span:after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.menu-btn span{
+  width: 100%;
+  top:14.5px;
+}
+#backbtn span:before {
+  width: 60%;
+  top: -3.5px;
+  transform: rotate(-35deg);
+}
+#backbtn span:after {
+  width: 60%;
+  top: 3.5px;
+  transform: rotate(35deg);
+}
+
+/* メニューボタン */
 .menu-btn {
     position: fixed;
     top: 10px;
@@ -65,13 +112,13 @@ html {
   }
   .menu-btn span{
     width: 50%;
-    top:14.5px;
   }
   .menu-btn span:after {
     width: 70%;
     top: 8px;
   }
-  .menu-btn:hover{
+  .menu-btn:hover,
+  #backbtn:hover{
     background-color: #555555;
     border: 1px solid;
     border-color: white;
