@@ -22,16 +22,16 @@ function fadein() {
 };
 
 // ボタン表示
-jQuery(function($){
-    $(window).on('scroll', function(){
-      var obj = document.getElementsByClassName("menu-btn")[0];
-      if ($(window).scrollTop() > -1) {
-        obj.style.visibility = "visible";
-      } else {
-        obj.style.visibility = "hidden";
-      }
-    });
-  });
+// jQuery(function($){
+//     $(window).on('scroll', function(){
+//       var obj = document.getElementsByClassName("menu-btn")[0];
+//       if ($(window).scrollTop() > -1) {
+//         obj.style.visibility = "visible";
+//       } else {
+//         obj.style.visibility = "hidden";
+//       }
+//     });
+//   });
   jQuery(function($){
     $(window).on('scroll', function(){
       var obj = document.getElementsByClassName("pagetop")[0];
@@ -42,7 +42,7 @@ jQuery(function($){
       }
     });
   });
-  
+
   // ボタン色
   function touchMenubtn(){
   document.getElementById("menu_btn").addEventListener("touchstart",function(){
@@ -58,14 +58,13 @@ jQuery(function($){
     document.getElementsByClassName("page_top_btn")[0].style.backgroundColor = "black";
   })
   }
-  
+
   // メニューで指定位置に飛ぶ
   function scrollJump (position){
     document.getElementById(position).scrollIntoView(true)
   }
-  
+
   //メニューの外側をクリックしてメニューを閉じる
   function deletemenu(){
     document.getElementById("menu-btn-check").checked = false;
   }
-  

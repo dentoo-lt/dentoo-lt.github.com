@@ -22,24 +22,14 @@ body {
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: underline;
-}
-
 a:link {
     color: azure;
 }
-
 a:visited {
-    color: beige;
+  color: beige;
 }
-
 a:hover {
-    color: #9daada;
-}
-
-a:active {
-    color: #77aa77;
+  background-color: #666;
 }
 
 h1 {
@@ -56,83 +46,56 @@ html {
     top: 10px;
     right: 10px;
     display: flex;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     justify-content: center;
     align-items: center;
     z-index: 200;
     background-color: #333333;
-    border-radius: 30px;
-    visibility: hidden;
-}
-
-.menu-btn span,
-.menu-btn span:before,
-.menu-btn span:after {
+    border-radius: 999px;
+  }
+  .menu-btn span,
+  .menu-btn span:after {
     content: "";
     display: block;
-    height: 3px;
-    width: 25px;
+    height: 2px;
     border-radius: 3px;
     background-color: #ffffff;
     position: absolute;
-}
-
-.menu-btn span:before {
-    bottom: 8px;
-}
-
-.menu-btn span:after {
+  }
+  .menu-btn span{
+    width: 50%;
+    top:14.5px;
+  }
+  .menu-btn span:after {
+    width: 70%;
     top: 8px;
-}
-
-.menu-btn:hover {
+  }
+  .menu-btn:hover{
     background-color: #555555;
-}
-
-#menu-btn-check:checked~.menu-btn span {
-    background-color: rgba(255,
-            255,
-            255,
-            0);
-    /*メニューオープン時は真ん中の線を透明にする*/
-}
-
-#menu-btn-check:checked~.menu-btn span::before {
-    bottom: 0;
+    border: 1px solid;
+    border-color: white;
+    border-bottom: transparent;
+  }
+  #menu-btn-check:checked ~ .menu-btn span {
+    width: 45%;
+    top: 18px;
     transform: rotate(45deg);
-}
-
-#menu-btn-check:checked~.menu-btn span::after {
+    transition: all 0.5s 0s ease;
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    width: 100%;
     top: 0;
-    transform: rotate(-45deg);
-}
-
-#menu-btn-check:checked~.menu-btn span {
-    background-color: rgba(255,
-            255,
-            255,
-            0);
-    /*メニューオープン時は真ん中の線を透明にする*/
-}
-
-#menu-btn-check:checked~.menu-btn span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-}
-
-#menu-btn-check:checked~.menu-btn span::after {
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-#menu-btn-check {
+    transform: rotate(-90deg);
+    transition: all 0.5s 0s ease;
+  }
+  #menu-btn-check {
     display: none;
-}
+  }
 
-.menu-content {
+  .menu-content {
     text-align: center;
-    width: 200px;
+    width: fit-content;
     height: 100vh;
     padding-top: 50px;
     padding-left: 0%;
@@ -140,25 +103,20 @@ html {
     padding-bottom: 0%;
     position: fixed;
     top: 0;
-    right: -100%;
-    /*rightの値を変更してメニューを画面外へ*/
-    transition: all 1s;
-    /*アニメーション設定*/
+    right: -100%; /*rightの値を変更してメニューを画面外へ*/
+    transition: all 1s; /*アニメーション設定*/
     background-color: #444444;
     z-index: 150;
     white-space: nowrap;
-}
-
-.menu-content>li {
+  }
+  .menu-content > li{
     text-align: center;
     padding-top: 20px;
-    font-size: larger;
-}
-
-#menu-btn-check:checked~.menu-content {
-    right: 0;
-    /*メニューを画面内へ*/
-}
+    font-size:larger;
+  }
+  #menu-btn-check:checked ~ .menu-content {
+    right: 0; /*メニューを画面内へ*/
+  }
 
 /* fadein */
 .up {
@@ -204,6 +162,7 @@ p {
 }
 
 /* ページトップボタン */
+/* ページトップボタン */
 .pagetop {
     position: fixed;
     bottom: 10px;
@@ -215,34 +174,33 @@ p {
     align-items: center;
     z-index: 200;
     background-color: #333333;
-    border-radius: 30px;
+    border-radius: 999px;
     visibility: hidden;
-}
-
-.pagetop span,
-.pagetop span:after {
+  }
+  .pagetop span,
+  .pagetop span:after {
     content: "";
     display: block;
-    height: 3px;
+    height: 2px;
     width: 15px;
     border-radius: 3px;
     background-color: #ffffff;
     position: absolute;
-}
-
-.pagetop span {
+  }
+  .pagetop span {
     top: 18px;
-    right: 8.2px;
+    right: 8.4px;
     transform: rotate(50deg);
-}
-
-.pagetop span:after {
-    top: 6.1px;
-    right: 5.3px;
+  }
+  .pagetop span:after {
+    top: 6.8px;
+    right: 5.5px;
     transform: rotate(-100deg);
-}
-
-.pagetop:hover {
+  }
+  .pagetop:hover{
     background-color: #555555;
-    transform: scale(1.1);
-}
+    transform:scale(1.03);
+    border: 1px solid;
+    border-color: white;
+    border-bottom :transparent;
+  }
