@@ -71,10 +71,10 @@ html {
   text-align: center;
   width: fit-content;
   height: 100vh;
-  padding-top: 50px;
-  padding-left: 0%;
-  padding-right: 0%;
-  padding-bottom: 0%;
+  padding-top: 52px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
   position: fixed;
   top: 0;
   right: -100%; /*rightの値を変更してメニューを画面外へ*/
@@ -87,6 +87,9 @@ html {
   text-align: center;
   padding-top: 20px;
   font-size:larger;
+}
+.menu-content a{
+  padding: 2px;
 }
 #menu-btn-check:checked ~ .menu-content {
   right: 0; /*メニューを画面内へ*/
@@ -126,7 +129,8 @@ body {
 
 .t1 a,
 .t2 a{
-  background:linear-gradient(transparent 40%, #666 100%);
+  background:linear-gradient(transparent 10%, #777 100%);
+  padding: 2px;
 }
 a:link {
   color: azure;
