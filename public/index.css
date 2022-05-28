@@ -582,11 +582,12 @@ table td {
   transform: translate(0, 100px);
 }
 
-/* CSSコード */
+/* ぬるっとスクロール */
 html {
   scroll-behavior: smooth;
 }
 
+/* 動画再生窓 */
 #video-wrap {
   position: fixed;
   top: 50%;
@@ -615,6 +616,7 @@ html {
   z-index: 100;
 }
 
+/* 動画を閉じるボタン */
 #delete {
   width: 30px;
   height: 30px;
@@ -630,6 +632,8 @@ html {
   background-color: rgb(255, 0, 0, 0.8);;
 }
 
+
+/* 動画を再生しますボタン */
 #delete img {
   height: 70%;
   width: 70%;
@@ -643,25 +647,27 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 250px;
+  width: 230px;
+  height: fit-content;
   padding: 10px 20px;
-  box-shadow: 2px 2px 4px #888;
+  box-shadow: 2.5px 2.5px 3px #777;
   background-color: white;
-  color: black;
-  border-radius: 20px;
+  color: #333;
+  border-radius: 25px;
   visibility: hidden;
 }
 
 #dialog input{
-  background-color: #3f3f3f;
+  background-color: #555;
   color: white;
-  border-radius: 5px;
+  margin-bottom: 5pt;
+  box-shadow: #111111;
 }
 
 #dialog input:hover{
-  background-color: #5c5c5c;
-  color: white;
-  border-radius: 5px;
+  background-color: whitesmoke;
+  color: #555;
+  font-weight: bolder;
 }
 
 /* ページトップボタン */
