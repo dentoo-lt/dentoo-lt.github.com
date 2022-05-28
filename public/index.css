@@ -25,6 +25,7 @@ html {
   align-items: center;
   z-index: 200;
   background-color: #333333;
+  border-radius: 999px;
   visibility: hidden;
 }
 .menu-btn span,
@@ -663,6 +664,7 @@ html {
   align-items: center;
   z-index: 200;
   background-color: #333333;
+  border-radius: 999px;
   visibility: hidden;
 }
 .pagetop span,
@@ -676,13 +678,13 @@ html {
   position: absolute;
 }
 .pagetop span {
-  top: 20px;
-  right: 7.6px;
+  top: 18px;
+  right: 8.4px;
   transform: rotate(50deg);
 }
 .pagetop span:after {
-  top: 7.3px;
-  right: 6.3px;
+  top: 6.8px;
+  right: 5.5px;
   transform: rotate(-100deg);
 }
 .pagetop:hover{
