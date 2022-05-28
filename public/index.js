@@ -93,6 +93,7 @@ window.onload = function () {
   fadein();
   touchMenubtn();
   document.getElementById("whole").addEventListener("mousedown", deletemenu);
+  document.getElementById("whole").addEventListener("mousedown", deletedialog);
 };
 
 $(document).ready(() => {
@@ -133,7 +134,7 @@ function deleteiframe() {
 }
 
 
-
+// 再生しますボタン出現
 function displayiframe(url, time) {
 	let dontask = document.getElementById("dontask");
 	if(sessionStorage.getItem("displaydialog") == "true"){
@@ -239,4 +240,7 @@ function past (){
 //メニューの外側をクリックしてメニューを閉じる
 function deletemenu(){
   document.getElementById("menu-btn-check").checked = false;
+}
+function deletedialog(){
+  document.getElementById("dialog").style.visibility = "hidden";
 }
