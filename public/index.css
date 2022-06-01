@@ -12,6 +12,7 @@ html {
   user-select: none; */
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 .menu-btn {
@@ -580,11 +581,6 @@ table td {
 }
 .op {
   transform: translate(0, 100px);
-}
-
-/* ぬるっとスクロール */
-html {
-  scroll-behavior: smooth;
 }
 
 /* 動画再生窓 */
