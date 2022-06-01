@@ -1,12 +1,14 @@
 html {
-    -webkit-touch-callout: none;
+    /* -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
     height: 100%;
     width: 100%;
+    text-align: center;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,14 +24,12 @@ body {
     box-sizing: border-box;
 }
 
+
 #contents a{
   background:linear-gradient(transparent 10%, #777 100%);
 }
-a{
-  text-decoration: none;
-}
 a:link {
-    color: azure;
+  color: azure;
 }
 a:visited {
   color: beige;
@@ -38,14 +38,13 @@ a:hover {
   background-color: #666;
 }
 
-h1 {
-    font-size: 25pt;
-    padding-top: 7%;
-    text-align: center;
+h1{
+  font-size: 25px;
+  text-align: center;
+  padding-top: 7%;
 }
-
-html {
-    scroll-behavior: smooth;
+p{
+  text-align: center;
 }
 
 /* 戻ボタン */
@@ -67,8 +66,8 @@ html {
 #backbtn span:after{
   content: "";
   display: block;
-  height: 2px;
-  width: 20px;
+  height: 2.5px;
+  width: 18px;
   border-radius: 3px;
   background-color: #ffffff;
   position: absolute;
@@ -79,13 +78,15 @@ html {
 }
 #backbtn span:before {
   width: 60%;
-  top: -3.5px;
-  transform: rotate(-35deg);
+  top: -3.2px;
+  right: 10px;
+  transform: rotate(-45deg);
 }
 #backbtn span:after {
   width: 60%;
-  top: 3.5px;
-  transform: rotate(35deg);
+  top: 2.5px;
+  right: 10px;
+  transform: rotate(45deg);
 }
 
 /* メニューボタン */
