@@ -5,11 +5,11 @@
 
 html {
 	/* -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; */
 	height: 100%;
 	width: 100%;
 	scroll-behavior: smooth;
@@ -150,7 +150,7 @@ a:hover {
 	background-color: #666;
 }
 /* a:active {
-  background:linear-gradient(transparent 100%, #666 0%);
+	background:linear-gradient(transparent 100%, #666 0%);
 
 } */
 
