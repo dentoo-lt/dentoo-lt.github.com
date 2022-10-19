@@ -57,13 +57,14 @@ a:hover {
 	padding: 20pt;
 	height: auto;
 	/* background-color: #333; */
+	/* opacity: 0.9; */
 	border-radius: 10px;
 	align-items: center;
 	transform: translate(-50%, -50%);
-	border: solid 4pt whitesmoke;
-	font-size: large;
+	border: solid 2pt whitesmoke;
+	font-size: 18pt;
 	color: whitesmoke;
-	backdrop-filter: blur(100px);
+	backdrop-filter: blur(35px);
 }
 
 .close {
