@@ -24,7 +24,7 @@ a:link {
 	color: azure;
 }
 a:visited {
-	color: beige;
+	color: azure;
 }
 a:hover {
 	background-color: #666;
@@ -56,14 +56,14 @@ a:hover {
 	max-width: 400pt;
 	padding: 20pt;
 	height: auto;
-	background-color: #333;
+	/* background-color: #333; */
 	border-radius: 10px;
 	align-items: center;
 	transform: translate(-50%, -50%);
 	border: solid 4pt whitesmoke;
 	font-size: large;
 	color: whitesmoke;
-	backdrop-filter: blur(12px);
+	backdrop-filter: blur(100px);
 }
 
 .close {
