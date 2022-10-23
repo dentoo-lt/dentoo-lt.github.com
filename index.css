@@ -56,15 +56,15 @@ a:hover {
 	max-width: 400pt;
 	padding: 20pt;
 	height: auto;
-	/* background-color: #333; */
-	/* opacity: 0.9; */
 	border-radius: 10px;
 	align-items: center;
 	transform: translate(-50%, -50%);
 	border: solid 2pt whitesmoke;
 	font-size: 18pt;
-	color: whitesmoke;
-	backdrop-filter: blur(35px);
+	color: white;
+	background-color: #111111;
+	opacity: 0.9;
+	/* backdrop-filter: blur(35px); */
 }
 
 .close {
